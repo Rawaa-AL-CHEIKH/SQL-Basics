@@ -17,3 +17,18 @@ SELECT employees.Name
 FROM employees JOIN companies ON employees.Company = companies.Name WHERE companies.Date < 2000;
 SELECT companies.Name
 FROM companies JOIN employees ON companies.Name = employees.Company WHERE employees.Role = 'Graphic Designer';'
+
+
+### Count & Filter
+'SELECT name FROM students WHERE Points = (SELECT max (Points) FROM students);
+
+SELECT AVG(Points) AS AveragePoints
+FROM students;
+
+SELECT COUNT(*) AS NumberOfStudentsHave500pt
+FROM students WHERE Points = 500;
+
+SELECT Name
+FROM students WHERE Name LIKE '%s%';
+
+SELECT * FROM students ORDER BY Points DESC;'
