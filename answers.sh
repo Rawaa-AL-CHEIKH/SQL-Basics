@@ -10,3 +10,10 @@ update students SET Points = Points - 25 WHERE Name = 'Alex';'
 INSERT INTO graduates (Name, Age, Gender, Points) SELECT Name, Age, Gender, Points FROM students WHERE Name = 'Layal';
 UPDATE graduates SET Graduation = '2018-09-08' WHERE Name = 'Layal';
 DELETE FROM students WHERE Name = 'Layal';'
+
+'SELECT employees.Name AS Employee, companies.Name AS Company, companies.Date AS Date
+FROM employees JOIN companies ON employees.Company = companies.name;
+SELECT employees.Name
+FROM employees JOIN companies ON employees.Company = companies.Name WHERE companies.Date < 2000;
+SELECT companies.Name
+FROM companies JOIN employees ON companies.Name = employees.Company WHERE employees.Role = 'Graphic Designer';'
